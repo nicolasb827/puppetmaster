@@ -1,0 +1,21 @@
+:backends:
+  - yaml
+  - json
+:yaml:
+  :datadir: /etc/puppetlabs/puppet/hieradata
+:json:
+  :datadir: /etc/puppetlabs/puppet/hieradata
+:hierarchy:
+  - "node/%{::environment}/%{clientcert}"
+  - "node/%{clientcert}"
+  - "group/%{owner}-%{project}"
+  - "group/%{owner}"
+  - "osfamily/%{::environment}/%{osfamily}"
+  - "osfamily/%{osfamily}"
+  - "target/%{::environment}/%{virtual}"
+  - "target/%{virtual}"
+  - "%{::environment}-common"
+  - "common"
+:logger:
+  - console
+
