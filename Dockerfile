@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER nicolas.belan@gmail.com
 
-VOLUME /etc/puppetlabs/puppet /etc/puppetlabs/code/modules /etc/puppetlabs/code/environments /etc/puppetlabs/puppet/hieradata 
+VOLUME /etc/puppetlabs/puppet /etc/puppetlabs/code/modules /etc/puppetlabs/code/environments /etc/puppetlabs/hieradata 
 
 RUN groupadd puppet
 RUN useradd -g puppet puppet
