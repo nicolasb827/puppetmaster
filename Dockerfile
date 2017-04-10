@@ -9,7 +9,6 @@ RUN rpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 RUN yum -y install which hostname tar puppetserver
 ADD start.sh /start.sh
 ADD puppetserver/auth.conf /etc/puppetlabs/puppetserver/conf.d/auth.conf
-#ADD puppetserver/puppetdb.conf /puppetdb.conf
 ADD puppetserver/master.conf /master.conf
 ADD puppetserver/hiera.yaml /hiera.yaml
 
