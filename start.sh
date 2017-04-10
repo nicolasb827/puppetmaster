@@ -29,6 +29,7 @@ server = $(hostname)
 masterport = 8149
 environment = production
 runinterval = 1h
+basemodulepath = /etc/puppetlabs/code/modules
 EOF
 
 if [ -f /master.conf ]; then
