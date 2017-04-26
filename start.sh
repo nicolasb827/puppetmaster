@@ -42,6 +42,10 @@ for CONF in puppetdb.conf hiera.yaml; do
 	fi
 done
 
+if [ -f /sysconfig.puppetserver ]; then
+	cp /sysconfig.puppetserver /etc/sysconfig/puppetserver
+fi
+
 if [ ! -d /etc/puppetlabs/code/environments/production ]; then
 	mkdir -p /etc/puppetlabs/code/environments/production
 	chown puppet:puppet /etc/puppetlabs/code/environments
