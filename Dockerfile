@@ -11,6 +11,7 @@ ADD start.sh /start.sh
 ADD puppetserver/auth.conf /etc/puppetlabs/puppetserver/conf.d/auth.conf
 ADD puppetserver/master.conf /master.conf
 ADD puppetserver/hiera.yaml /hiera.yaml
+ADD sysconfig.puppetserver  /sysconfig.puppetserver
 
 ENV PATH /opt/puppetlabs/bin/:$PATH
 CMD /start.sh
