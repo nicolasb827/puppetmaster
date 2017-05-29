@@ -51,4 +51,9 @@ if [ ! -d /etc/puppetlabs/code/environments/production ]; then
 	chown puppet:puppet /etc/puppetlabs/code/environments
 fi
 
+if [ ! -d /etc/puppetlabs/puppetserver/conf.d ]; then
+	mkdir -p /etc/puppetlabs/puppetserver/conf.d
+	chown puppet:puppet /etc/puppetlabs/puppetserver/conf.d
+fi
+
 /opt/puppetlabs/bin/puppetserver foreground
