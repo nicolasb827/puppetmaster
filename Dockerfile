@@ -4,6 +4,10 @@ LABEL network.b2.version="1.0.0"
 LABEL vendor="B2 Network"
 LABEL network.b2.release-date="2017-06-01"
 LABEL network.b2.version.is-production="0"
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="e.g. https://github.com/microscaling/microscaling"
+
+ARG VCS_REF
 
 # set to 1 to autosign client cert (should be set in dev/testing)
 ARG AUTOSIGN
